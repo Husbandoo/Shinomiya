@@ -117,7 +117,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[Aogiri]", url=f"https://t.me/AogiriNetwork"),
+            text="[Aogiri]", url="https://t.me/AogiriNetwork"),
         InlineKeyboardButton(
             text="Help", callback_data="help_back"),
         InlineKeyboardButton(
@@ -125,7 +125,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="Support", url="https://t.me/ShinomiyaSupport"),
+            text="Support", url=f"https://t.me/ShinomiyaSupport"),
         InlineKeyboardButton(
             text="Updates", url="https://t.me/ShinomiyaUpdates"),
         ),
@@ -262,7 +262,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
                 update.effective_message.reply_video(
-            START_IMG, caption="ʏᴏ, Voilet ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            START_IMG, caption="Kon'nichiwa Kaguya Here To Help You!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,

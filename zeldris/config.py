@@ -48,7 +48,7 @@ class Config(object):
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "postgresql://xlzbhnyp:FVQzpp344W5yDcXc_cupZHy5qZoehDbN@castor.db.elephantsql.com/xlzbhnyp"  # needed for any database modules
-    MESSAGE_DUMP = -1001501815938  # needed to make sure 'save from' messages persist
+    MESSAGE_DUMP = -1001607789423  # needed to make sure 'save from' messages persist
     REDIS_URL = "redis://:LBVYsRjHCjJWb5xbyJXZdoHChpKVUJGr@redis-16484.c15.us-east-1-4.ec2.cloud.redislabs.com:16484"  # needed for afk module, get from redislab
     LOAD = []
     SUPPORT_CHAT = "ShinomiyaSupport"  # Your own group for support, do not add the @

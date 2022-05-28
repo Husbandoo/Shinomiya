@@ -84,22 +84,26 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-HELP_IMG = "https://telegra.ph/file/b920d0c82a1ec55045bec.mp4"
+HELP_IMG = "https://telegra.ph/file/02ff19d802c4ce367dd1c.jpg"
 HELP_MSG = "Click the button below to get help menu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
-START_IMG = "https://telegra.ph/file/d85f39ca5e58ef5644401.mp4"
+START_IMG = "https://telegra.ph/file/0e2064896320536b65aae.jpg"
     
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/d8d515b36537c6375246d.jpg) 」────
-Heyyo `{}`, Voilet here to help,
-*I am an Anime themed advance group management bot with a lot of awesome Features*
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-• *Uptime:* `{}`
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-• `{}` *users, across* `{}` *chats.*
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-*Try The Help Buttons Below To Know My Abilities And Charm* ××
+やあ *Kon'nichiwa* {} *- San!*
+✿ *My Name Is Kaguya Shinomiya* ✿
+*I can manage your group with useful & Advanced features , feel free to add me to your groups! ♡*
+
+◈ *Version :* `3.10.6`
+◈ *Server Uptime :* `{}`
+◈ `{}` *Users* , *Across* `{}` *Chats.*
+
+➢ *Try The Help Buttons Below To See The Commands Available After My Element Buff* ××"""
 """
+
+
+PM_START_PIC = "https://telegra.ph/file/2023d7c4a27551deaf8fa.jpg"
+
 
 GROUP_START_TEXT = """
 I'm awake already!
@@ -109,17 +113,21 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text="💖 ADD ME IN YOUR GROUP",url="t.me/voilet_probot?startgroup=true"),
+            text="Add Kaguya To Your Group", url="t.me/kaguyaprobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="⚙️ Support", url=f"https://t.me/villainevil_support"),
+            text="[Aogiri]", url=f"https://t.me/AogiriNetwork"),
         InlineKeyboardButton(
-            text="🎉 Updates", url="https://t.me/dabi_updates")
+            text="Help", callback_data="help_back"),
+        InlineKeyboardButton(
+            text="[Owner]", url="https://t.me/Husbandoo"), 
     ],
-    [                    
+    [
         InlineKeyboardButton(
-            text="🔐 Help", callback_data="help_back"
+            text="Support", url="https://t.me/ShinomiyaSupport"),
+        InlineKeyboardButton(
+            text="Updates", url="https://t.me/ShinomiyaUpdates"),
         ),
     ],
 ]
@@ -261,10 +269,10 @@ def start(update: Update, context: CallbackContext):
              reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="❤Sᴜᴘᴘᴏʀᴛ❤", url="https://telegram.dog/Villainevil_support")
+                  InlineKeyboardButton(text="Support", url="https://telegram.dog/ShinomiyaSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="🔰Uᴘᴅᴀᴛᴇs🔰", url="https://telegram.dog/Dabi_updates")
+                  InlineKeyboardButton(text="Updates", url="https://telegram.dog/ShinomiyaUpdates")
                   ]
                 ]
             ),
@@ -296,7 +304,7 @@ def error_handler(update, context):
     if len(message) >= 4096:
         message = message[:4096]
     # Finally, send the message
-    context.bot.send_message(chat_id=-1001501815938, text=message, parse_mode=ParseMode.HTML)
+    context.bot.send_message(chat_id=-1001605722091, text=message, parse_mode=ParseMode.HTML)
 
 
 # for test purposes
@@ -624,7 +632,7 @@ def donate(update: Update, context: CallbackContext):
     bot = context.bot
     update.effective_message.reply_text(
         "You can also donate to the person currently running me "
-        "[here](https://ko-fi.com/AuraMoon55)",
+        "[here](https://t.me/Husbandoo)",
         parse_mode=ParseMode.MARKDOWN,
     )
 
@@ -656,8 +664,8 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.send_photo(
-                "@Villainevil_support",
-                "https://telegra.ph/file/363b020f4bd4810ea35b6.jpg",
+                "@ShinomiyaSupport",
+                "https://telegra.ph/file/0e2064896320536b65aae.jpg",
                 "I Am Alive Now!",
                 parse_mode=ParseMode.MARKDOWN,
             )

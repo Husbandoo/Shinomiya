@@ -38,20 +38,20 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    TOKEN = "5092248582:AAFrpzaSLUN0gdEcmj4EAPb-d8rJ7C1ET1Y"  # Take from @BotFather
+    TOKEN = "5364041591:AAEPo9zccIjLMRBhIUNHhIckseQXvxTeFXM"  # Take from @BotFather
     OWNER_ID = (
-         1242979521 # If you dont know, run the bot and do /id in your private chat with it
+         1938491135 # If you dont know, run the bot and do /id in your private chat with it
     )
-    OWNER_USERNAME = "xd_dabi"
-    API_HASH = "90dd95178a8d13a69bfdbc7da68d23a4"  # for purge stuffs
-    API_ID = 2919867
+    OWNER_USERNAME = "Husbandoo"
+    API_HASH = "6b19682d1aeeda50a4aa8b6eb61f3a4e"  # for purge stuffs
+    API_ID = 7761098
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "postgresql://xlzbhnyp:FVQzpp344W5yDcXc_cupZHy5qZoehDbN@castor.db.elephantsql.com/xlzbhnyp"  # needed for any database modules
     MESSAGE_DUMP = -1001501815938  # needed to make sure 'save from' messages persist
-    REDIS_URL = "redis://KawakiGod:KawakiGod64~@redis-12067.c285.us-west-2-2.ec2.cloud.redislabs.com:12067"  # needed for afk module, get from redislab
+    REDIS_URL = "redis://:LBVYsRjHCjJWb5xbyJXZdoHChpKVUJGr@redis-16484.c15.us-east-1-4.ec2.cloud.redislabs.com:16484"  # needed for afk module, get from redislab
     LOAD = []
-    SUPPORT_CHAT = "Villainevil_support"  # Your own group for support, do not add the @
+    SUPPORT_CHAT = "ShinomiyaSupport"  # Your own group for support, do not add the @
     NO_LOAD = []
     WEBHOOK = False
     URL = None
